@@ -1,0 +1,145 @@
+{% load static %}
+{% for home in view %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>{{ home.title }}</title>
+</head>
+
+<body>
+  <div class="full-site">
+    <div class="birinchi-bob">
+      <div class="first-navbar">
+        <h1>
+          Online <span>
+            Shopping
+          </span>
+        </h1>
+        <div class="links">
+          <ul>
+            <li>
+              <a herf="#">
+                {{ home.login }}
+              </a </li>
+            <li>
+              <a herf="#">
+                Products
+              </a </li>
+            <li>
+              <a herf="#" id="features">
+                Features
+              </a </li>
+            <li>
+              <a herf="#">
+                Testimonials
+              </a </li>
+            <li>
+              <a herf="#">
+                About
+              </a </li>
+            <li>
+              <a herf="#">
+                Contact
+              </a </li>
+          </ul>
+        </div>
+        <button>
+          Signup
+        </button>
+      </div>
+      <div class="first-body">
+        <div class="first--body-text">
+          <div class="first-text">
+            <p>
+              Say Hello and Get Started With Us
+            </p>
+          </div>
+          <div class="two-text">
+            <h1>
+              Enjoy Your <br> Online Shopping
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet
+              consectetur <br> adipisicing elit. Quasi asperiores sit accusamus delectus natus.
+            </p>
+          </div>
+          <div class="buttons">
+            <button class="first-button">
+              Shop Now
+            </button>
+            <button class="two-button">
+              <i class="fa-solid fa-play"></i> {{ home.emblem }}
+            </button>
+          </div>
+        </div>
+        <img src="{% static 'images/gif.gif' %}" alt="800">
+      </div>
+    </div>
+    <div class="two-body">
+      <div class="bottom-style">
+        <div class="bottom-style-in">
+          <div class="bottom-style-text1">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>{{ home.text1 }}</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam molestias quaerat quibusdam ratione.
+              Maiores, ipsum?</p>
+          </div>
+          <div class="bottom-style-text2">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <h3>
+              {{ home.text2 }}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem beatae voluptates quis cupiditate ratione
+              dolores!</p>
+          </div>
+          <div class="bottom-style-text3">
+            <i class="fa-regular fa-circle-play"></i>
+            <h3>{{ home.text3 }}</h3>
+            <p>Easy return
+              Lorem ipsum dolor sit amet consec adipisicing elit. Dolore, cum accusamus. Nesciunt porro nobis officiis?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center-img" id="features">
+      <img src="{% static 'images/shop.svg' %}" alt="">
+      <div class="center-img-text">
+        <p>About</p>
+        <h1>Welcome To Our <br> Online Shopping.com</h1>
+        <div class="p1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi asperiores sit accusamus delectus natus.
+        </div>
+        <div class="p2">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Quo est eos sequi tempore sed velit, tempora aliquid deserunt illum magnam, optio impedit quod praesentium
+          fugiat modi? Ullam architecto magni incidunt?
+        </div>
+        <div class="two-button">
+          <button class="first">
+            Read more
+          </button>
+          <button class="two">
+            <i class="fa-solid fa-play"></i> Get Started With Us!
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    {% for rasm in image %}
+    <img src="{{ rasm.image.url }}" alt="error" width="500">
+  {% endfor %}
+  </div>
+
+
+</body>
+</html>
+
+{% endfor %}
